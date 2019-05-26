@@ -1,13 +1,11 @@
-# BeetsPi
-Webbased genre tagger with Beets backend
+# Beets Genre Manager
+Web application for managing album genres in beets.
 
 ## Frontend
-- React framework
-- Webpack package manager
-- Bootstrap css framework
+- React
+- webpack
+- Bootstrap
 
 ## Backend
-- SQLLite (beets db)
-  - Geen ORM
-- Python server
-- Flask server framework
+- Python + Flask
+- SQLite (beets db), no ORM (for now)
