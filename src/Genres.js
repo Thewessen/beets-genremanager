@@ -1,9 +1,9 @@
-import React from 'react';
-import './Genres.css';
+import React from 'react'
+import './Genres.css'
 
-function Genres() {
+function Genres () {
   return (
-    <div className="Genre-container">
+    <div className='Genre-container'>
       <ul>
         <li>Blues</li>
         <li>Classical</li>
@@ -17,7 +17,7 @@ function Genres() {
         <li>World</li>
       </ul>
     </div>
-  );
+  )
 }
 
-export default Genres;
+export default Genres
