@@ -37,8 +37,8 @@
     "type": "git",
     "url": "git+https://github.com/bartkl/beets-genremanager.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["genretagger", "React-app", "genre", "tagger", "BeetsDB"],
+  "author": "B. Kleijngeld and S. Thewessen",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/bartkl/beets-genremanager/issues"
