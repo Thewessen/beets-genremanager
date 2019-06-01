@@ -1,16 +1,18 @@
-import { SELECT_GENRE } from "../actionTypes.js"
+import { TOGGLE_GENRE } from "../actionTypes.js"
 
 const initialState = {
-  genres: [],
-  selectedGenre: null
+  genres: [
+    { value: 'Blues', selected: true },
+    { value: 'Electronic', selected: false },
+    { value: 'Rock', selected: false },
+  ],
 }
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case SELECT_GENRE: {
+    case TOGGLE_GENRE: {
       return {
-        genres: [],
-        selectedGenre: action.value
+        genres: state.genres.map(genre => genre.value === action.value ? { value: genre.value, selected: !genre.selected } : genre )
       }
     }
     default:

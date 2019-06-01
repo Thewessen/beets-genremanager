@@ -1,6 +1,6 @@
-import { SELECT_GENRE } from './actionTypes.js'
+import { TOGGLE_GENRE } from './actionTypes.js'
 
-export const selectGenre = (genre) => ({
-  type: SELECT_GENRE,
+export const toggleGenre = (genre) => ({
+  type: TOGGLE_GENRE,
   value: genre
 })

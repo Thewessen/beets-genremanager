@@ -1,12 +1,12 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { selectGenre } from '../redux/actions.js'
+import { toggleGenre } from '../redux/actions.js'
 import '../Genres.css'
 
 const Genre = (props) => {
   return (
     <div className="genre">
-      <li onClick={() => props.selectGenre(props.value)}
+      <li onClick={() => props.toggleGenre(props.value)}
       >
         { props.value }
         { props.selected === true ? ' (selected)' : '' }
@@ -15,4 +15,7 @@ const Genre = (props) => {
   )
 }
 
-export default connect(null, {selectGenre} )(Genre)
+export default connect(
+  null,
+  { toggleGenre }
+)(Genre)

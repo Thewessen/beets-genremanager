@@ -1,1 +1,1 @@
-export const SELECT_GENRE = 'SELECT_GENRE'
+export const TOGGLE_GENRE = 'TOGGLE_GENRE'

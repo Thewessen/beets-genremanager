@@ -8,16 +8,14 @@ const Genres = (props) => {
     <div id="genres">
       <ul>
         {props.genres.map(genre =>
-                          <Genre value={genre}
-                                 selected={props.selectedGenre == genre ? true : false}  />)}
+                          <Genre value={genre.value}
+                                 selected={genre.selected}  />)}
       </ul>
     </div>
   )
 }
 
 export default connect(
-  state => ({
-    selectedGenre: state.selectedGenre
-  }),
+  state => ({ genres: state.genres }),
   null
 )(Genres)
