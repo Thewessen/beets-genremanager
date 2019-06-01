@@ -1,0 +1,22 @@
+#app {
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+}
+
+#app-header {
+  align-items: center;
+  background-color: #282c34;
+  color: white;
+  display: flex;
+  font-size: calc(16px + 1vmin);
+  justify-content: center;
+}
+
+#genres-container {
+  flex: 0 20%;
+}
+
+#albums-container {
+  flex: 1 80%;
+}
