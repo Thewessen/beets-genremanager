@@ -14,9 +14,7 @@ export const Genre = (props) => {
   )
 }
 
-const $Genre = connect(
+export default connect(
   null,
   { toggleGenre }
 )(Genre)
-
-export default $Genre

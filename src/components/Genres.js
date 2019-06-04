@@ -15,9 +15,7 @@ export const Genres = (props) => {
   )
 }
 
-const $Genres = connect(
+export default connect(
   state => ({ genres: state.genres }),
   null
 )(Genres)
-
-export default $Genres
