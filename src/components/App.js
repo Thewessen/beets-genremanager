@@ -4,11 +4,10 @@ import Genres from './Genres.js'
 import Albums from './Albums.js'
 
 const App = () => {
-  const genres = ['Blues', 'Electronic']
   return (
     <div id="app">
       <div id="genres-container">
-        <Genres genres={genres} />
+        <Genres />
       </div>
       <div id="albums-container">
           <Albums />
