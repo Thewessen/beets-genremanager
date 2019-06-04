@@ -8,7 +8,7 @@ export const Genre = (props) => {
     <div className="genre">
       <li onClick={() => props.toggleGenre(props.genre)}>
         { props.genre }
-        { props.selected === true ? '(selected)' : '' }
+        { props.selected === true ? ' (selected)' : '' }
       </li>
     </div>
   )
