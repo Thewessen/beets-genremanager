@@ -6,9 +6,8 @@ import '../Genres.css'
 const Genre = (props) => {
   return (
     <div className="genre">
-      <li onClick={() => props.toggleGenre(props.value)}
-      >
-        { props.value }
+      <li onClick={() => props.toggleGenre(props.genre)}>
+        { props.genre }
         { props.selected === true ? ' (selected)' : '' }
       </li>
     </div>
