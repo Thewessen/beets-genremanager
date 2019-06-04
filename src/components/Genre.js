@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { toggleGenre } from '../redux/actions.js'
 import '../Genres.css'
 
-const Genre = (props) => {
+export const Genre = (props) => {
   return (
     <div className="genre">
       <li onClick={() => props.toggleGenre(props.genre)}>
@@ -14,7 +14,9 @@ const Genre = (props) => {
   )
 }
 
-export default connect(
+const $Genre = connect(
   null,
   { toggleGenre }
 )(Genre)
+
+export default $Genre

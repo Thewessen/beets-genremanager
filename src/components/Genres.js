@@ -1,8 +1,9 @@
+import React from 'react'
 import Genre from './Genre.js'
 import { connect } from 'react-redux'
 import '../Genres.css'
 
-const Genres = (props) => {
+export const Genres = (props) => {
   return (
     <div id="genres">
       <ul>
@@ -14,7 +15,9 @@ const Genres = (props) => {
   )
 }
 
-export default connect(
+const $Genres = connect(
   state => ({ genres: state.genres }),
   null
 )(Genres)
+
+export default $Genres
