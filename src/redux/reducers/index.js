@@ -4,8 +4,8 @@ const initialState = {
   genres: [
     { value: 'Blues', selected: true },
     { value: 'Electronic', selected: false },
-    { value: 'Rock', selected: false },
-  ],
+    { value: 'Rock', selected: false }
+  ]
 }
 
 export default (state = initialState, action) => {
@@ -20,6 +20,6 @@ export default (state = initialState, action) => {
       }
     }
     default:
-      return state;
+      return state
   }
 }
