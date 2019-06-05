@@ -5,12 +5,12 @@ import Albums from './Albums.js'
 
 const App = () => {
   return (
-    <div id="app">
-      <div id="genres-container">
+    <div id='app'>
+      <div id='genres-container'>
         <Genres />
       </div>
-      <div id="albums-container">
-          <Albums />
+      <div id='albums-container'>
+        <Albums />
       </div>
     </div>
   )
