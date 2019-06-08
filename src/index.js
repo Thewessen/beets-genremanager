@@ -14,14 +14,7 @@ const store = createStore(
 )
 
 const apolloClient = new ApolloClient({
-  request: async (operation) => {
-    operation.setContext({
-      headers: {
-        'Authorization': `Bearer ${process.env.REACT_APP_GITHUB_PERSONAL_ACCESS_TOKEN}`
-      }
-    })
-  },
-  uri: 'https://api.github.com/graphql'
+  uri: 'http://localhost:5000/graphql'
 })
 
 ReactDOM.render(

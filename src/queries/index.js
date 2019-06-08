@@ -1,18 +1,12 @@
 import gql from 'graphql-tag'
 
-export const GET_ORGANIZATIONS = gql`
+export const GET_ALBUMS = gql`
   {
-    organization(login: "the-road-to-learn-react") {
+    albums(contains: "yr") {
       name
-      url
-      repositories(first: 2, after: "Mg") {
-        edges {
-          node {
-            name
-          }
-          cursor
-        }
-      }
+      albumArtist
+      genre
+      year
     }
   }
 `
