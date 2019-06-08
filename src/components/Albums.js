@@ -1,11 +1,17 @@
 import React from 'react'
+import { connect } from 'react-redux'
 import '../Albums.css'
 import { Query } from 'react-apollo'
 import { GET_ALBUMS } from '../queries'
 
-const Albums = () => {
+export const Albums = (props) => {
+  let selectedGenres = props.genres
+                         .filter(g => g.selected)
+                         .map(g => g.value)
+
   return (
-    <Query query={GET_ALBUMS} variables={ {contains: "yr"} }>
+    /*<Query query={GET_ALBUMS} variables={ {contains: "yr"} }>*/
+    <Query query={GET_ALBUMS} variables={{ genreIn: selectedGenres }}>
       {({loading, error, data}) => {
         if (loading) {
           return <p>Loading...</p>
@@ -33,4 +39,7 @@ const Albums = () => {
   )
 }
 
-export default Albums
+export default connect(
+  state => ({ genres: state.genres }),
+  null
+)(Albums)
