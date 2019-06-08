@@ -1,8 +1,8 @@
 import gql from 'graphql-tag'
 
 export const GET_ALBUMS = gql`
-  {
-    albums(contains: "yr") {
+  query Albums($contains: String) {
+    albums(contains: $contains) {
       name
       albumArtist
       genre
@@ -10,3 +10,5 @@ export const GET_ALBUMS = gql`
     }
   }
 `
+
+//export const UPDATE_GENRE = 

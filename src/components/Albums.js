@@ -5,7 +5,7 @@ import { GET_ALBUMS } from '../queries'
 
 const Albums = () => {
   return (
-    <Query query={GET_ALBUMS}>
+    <Query query={GET_ALBUMS} variables={ {contains: "yr"} }>
       {({loading, error, data}) => {
         if (loading) {
           return <p>Loading...</p>
