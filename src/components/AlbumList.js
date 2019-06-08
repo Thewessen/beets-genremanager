@@ -4,14 +4,13 @@ import '../Albums.css'
 import { Query } from 'react-apollo'
 import { GET_ALBUMS } from '../queries'
 
-export const Albums = (props) => {
+export const AlbumList = (props) => {
   let selectedGenres = props.genres
                          .filter(g => g.selected)
                          .map(g => g.value)
 
   return (
-    /*<Query query={GET_ALBUMS} variables={ {contains: "yr"} }>*/
-    <Query query={GET_ALBUMS} variables={{ genreIn: selectedGenres }}>
+    <Query query={GET_ALBUMS} variables={{ genreIn: selectedGenres, nameContains: props.albumFilterTerm }}>
       {({loading, error, data}) => {
         if (loading) {
           return <p>Loading...</p>
@@ -40,6 +39,9 @@ export const Albums = (props) => {
 }
 
 export default connect(
-  state => ({ genres: state.genres }),
+  state => ({
+    genres: state.genres,
+    albumFilterTerm: state.albumFilterTerm
+  }),
   null
-)(Albums)
+)(AlbumList)

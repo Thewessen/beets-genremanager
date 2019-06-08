@@ -1,6 +1,7 @@
-import { TOGGLE_GENRE } from '../actionTypes.js'
+import { TOGGLE_GENRE, FILTER_ALBUMS } from '../actionTypes.js'
 
 const initialState = {
+  albumFilterTerm: null,
   genres: [
     { value: 'Blues', selected: true },
     { value: 'Electronic', selected: false },
@@ -17,6 +18,12 @@ export default (state = initialState, action) => {
             ? { value: genre.value, selected: !genre.selected }
             : genre
         )
+      }
+    }
+    case FILTER_ALBUMS: {
+      return {
+        ...state,
+        albumFilterTerm: action.payload.value
       }
     }
     default:

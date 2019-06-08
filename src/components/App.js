@@ -1,7 +1,8 @@
 import React from 'react'
 import '../App.css'
 import Genres from './Genres.js'
-import Albums from './Albums.js'
+import AlbumFilter from './AlbumFilter.js'
+import AlbumList from './AlbumList.js'
 
 const App = () => {
   return (
@@ -10,7 +11,8 @@ const App = () => {
         <Genres />
       </div>
       <div id='albums-container'>
-        <Albums />
+        <AlbumFilter />
+        <AlbumList />
       </div>
     </div>
   )

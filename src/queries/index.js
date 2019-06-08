@@ -10,5 +10,3 @@ export const GET_ALBUMS = gql`
     }
   }
 `
-
-//export const UPDATE_GENRE = 
