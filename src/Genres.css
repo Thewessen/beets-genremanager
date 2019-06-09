@@ -1,7 +1,7 @@
 #genres {
   align-items: center;
   display: flex;
-  font-size: calc(16px + 1vmin);
+  font-size: calc(0.6em + 1vmin);
   text-align: center;
 }
 
