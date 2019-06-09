@@ -9,6 +9,7 @@ export default (state = initialState, action) => {
   switch (action.type) {
     case TOGGLE_GENRE: {
       return {
+        ...state,
         genres: state.genres.map(
           genre => genre.value === action.payload.value
             ? { value: genre.value, selected: !genre.selected }

@@ -12,20 +12,22 @@ export const Genres = (props) => {
     <Query query={GET_GENRES}
            skip={props.genres.length !== 0}>
       {({loading, error, data}) => {
-        if (loading) {
-          return <p>Loading...</p>
-        } else if (error) {
-          return <p>Error...</p>
-        }
-        if (data) {
+        if (data !== undefined && data.genres) {
           props.storeGenres(data.genres)
         }
         return (
           <div id="genres">
+            <h1>Genres</h1>
+            { loading
+              ? <p>Loading...</p>
+              : error
+                ? <p>Error...</p>
+                : ''
+            }
             <ul>
-              {props.genres.map(genre =>
+              {!error && !loading && props.genres ? props.genres.map(genre =>
                                 <Genre genre={genre.value}
-                                       selected={genre.selected}  />)}
+                                       selected={genre.selected}  />) : ''}
             </ul>
           </div>
         )}

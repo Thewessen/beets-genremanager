@@ -10,8 +10,10 @@ const App = () => {
       <div id='genres-container'>
         <Genres />
       </div>
-      <div id='albums-container'>
+      <div id='albums-filter-container'>
         <AlbumFilter />
+      </div>
+      <div id='albums-container'>
         <AlbumList />
       </div>
     </div>
