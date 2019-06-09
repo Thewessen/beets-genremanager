@@ -1,12 +1,8 @@
-import { TOGGLE_GENRE, FILTER_ALBUMS } from '../actionTypes.js'
+import { TOGGLE_GENRE, FILTER_ALBUMS, STORE_GENRES } from '../actionTypes.js'
 
 const initialState = {
   albumFilterTerm: null,
-  genres: [
-    { value: 'Blues', selected: true },
-    { value: 'Electronic', selected: false },
-    { value: 'Rock', selected: false },
-  ],
+  genres: [],
 }
 
 export default (state = initialState, action) => {
@@ -24,6 +20,12 @@ export default (state = initialState, action) => {
       return {
         ...state,
         albumFilterTerm: action.payload.value
+      }
+    }
+    case STORE_GENRES: {
+      return {
+        ...state,
+        genres: action.payload.value.map(value => ({value: value, selected: false}))
       }
     }
     default:

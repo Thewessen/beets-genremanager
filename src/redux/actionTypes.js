@@ -1,2 +1,3 @@
 export const TOGGLE_GENRE = 'TOGGLE_GENRE'
 export const FILTER_ALBUMS = 'FILTER_ALBUMS'
+export const STORE_GENRES = 'STORE_GENRES'

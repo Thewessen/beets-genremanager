@@ -10,3 +10,8 @@ export const GET_ALBUMS = gql`
     }
   }
 `
+export const GET_GENRES = gql`
+  query Genres {
+    genres
+  }
+`
