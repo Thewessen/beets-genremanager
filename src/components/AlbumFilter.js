@@ -5,6 +5,7 @@ import { filterAlbums } from '../redux/actions';
 export const AlbumFilter = (props) => {
   return (
     <div>
+      <span style={{ marginRight: 1 + 'em' }}>Filter:</span>
       <input type="text" onChange={(e) => props.filterAlbums(e.target.value)} />
     </div>
   )

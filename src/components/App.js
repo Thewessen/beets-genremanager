@@ -11,6 +11,7 @@ const App = () => {
         <Genres />
       </div>
       <div id='albums-filter-container'>
+        <h1>Albums</h1>
         <AlbumFilter />
       </div>
       <div id='albums-container'>

@@ -14,7 +14,6 @@ export const AlbumList = (props) => {
       {({loading, error, data}) => {
         return (
           <div id='album-list-container'>
-            <h1>Albums</h1>
             { loading
               ? <p>Loading...</p>
               : error
