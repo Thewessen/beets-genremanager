@@ -2,7 +2,7 @@
   display: grid;
   grid-gap: 10px;
   grid-template-columns: [col1-start] 300px [col2-start] auto [col2-end];
-  grid-template-rows: [row1-start] 100px [row2-start] auto [row2-end];
+  grid-template-rows: [row1-start] 150px [row2-start] auto [row2-end];
 }
 
 #app-header {
